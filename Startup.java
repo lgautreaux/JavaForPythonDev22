@@ -1,6 +1,5 @@
 import java.time.LocalDate;
 
-
 public class Startup {
     static int classLocal;
 
@@ -22,63 +21,46 @@ public class Startup {
         if (student.major == Major.COMPUTERSCIENCE) {
             System.out.println("Computers are the best");
         }
-            
-            Car car1 = new Car();
-            car1.setHorsePower(14);
-            car1.setCarStyle(CarStyle.SUV);
-            car1.setPowerType(PowerType.UNLEADED);
-    
-            Car car2 = new Car();
-    
-            Car car3 = new Car();
-            car3.setHorsePower(195);
-    
-            System.out.println(car1.getHorsePower());
-            System.out.println(car2.getHorsePower());
-            System.out.println(car3.getHorsePower());
-            
-        // Circle circle2 = circle;
-        // System.out.println("Circle 2s radius " + circle2.radius);
-        // circle.radius = 10;
-        // System.out.println("Circle 2s radius " + circle2.radius);
-        // String name = "Logan";
-        //String name1= "Logan12";
-
-        // System.out.println(name.toLowerCase());
-
-        // // Student student3 = new Student();
-        // System.out.println(student3.studentName);
-        // student.studentName = "Logan";
-        // System.out.println(student.studentName);
-        // student.GPA = Float.parseFloat("458.1");
-        // System.out.println("GPA " + student.GPA);
-        // System.out.println(classLocal);
-
-        // System.out.println(getVowels("gautreaux"));
-    
-
-    // public static double harmonic(int n){
-    //     int local = 0;
-    //     System.out.println(local);
-    //     //System.out.println(classLocal);
-    //     for (int i = 0; i< 3; i++) {
-    //         int forLoopLocal = 1;
-    //         System.out.println(forLoopLocal);
-    //     }
-    //     return n;
-    // }
-    // public static int getVowels(String term) {
-    //     int counter = 0; // Initialize counter variable
         
-    //     for (int i = 0; i < term.length(); i++) {
-    //         char letter = term.charAt(i);
-    
-    //         // Check if the character is a vowel
-    //         if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u') {
-    //             counter++; // Increment counter if the character is a vowel
-    //         }
-    //     }
-    
-        // return counter; // Return the count of vowels
+        Car car1 = new Car(Make.Toyota, Model.Highlander, 2001);
+        // System.out.println(car1);
+        car1.setHorsePower(14);
+        car1.setCarStyle(CarStyle.SUV);
+        car1.setPowerType(PowerType.UNLEADED);
+        car1.drive(140);
+        System.out.println("current mileage before driving: " + car1.mileage);
+        car1.drive(20);
+        System.out.println("current mileage after driving: " + car1.mileage);
+        System.out.println(car1.year);
+
+        Car car2 = new Car(Make.Jeep, Model.Wrangler, 2018);
+        car2.setHorsePower(165);
+
+        Car car3 = new Car(Make.Nissan, Model.Sentra, 2014);
+        car3.drive(classLocal);
+        car3.setHorsePower(195);
+        System.out.println("Current mileage in kilometers: " + car3.ConvertMileageToKilometers());
+
+        System.out.println(car1.getHorsePower());
+        System.out.println(car2.getHorsePower());
+        System.out.println(car3.getHorsePower());
+
+        System.out.println("Number of cars on the road: " + Car.numberOfCars);
+
+        // Call the method to demonstrate
+        // harmonic(5);
+
+        // Call the method to demonstrate
+        // System.out.println("Number of vowels: " + getVowels("gautreaux"));
     }
+
+    // Stub implementation for the harmonic method
+    // public static double harmonic(int n){
+    //     // Implement the method here
+    // }
+
+    // Stub implementation for the getVowels method
+    // public static int getVowels(String term) {
+    //     // Implement the method here
+    // }
 }
